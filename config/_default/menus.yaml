@@ -8,11 +8,10 @@ main:
     url: post/
     weight: 10
   - name: Artículos Científicos
-    url: '#featured'
+    url: papers/
     weight: 20
   - name: Cursos
-    url: courses/
+    url: https://www.brackinstitute.com/cursos-y-programas
     weight: 30
   - name: Contacto
-    url: '#contact'
-    weight: 40
+    url: mailto:isaldanau@gmail.com
