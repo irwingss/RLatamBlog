@@ -1,9 +1,8 @@
 ---
-cms_exclude: true
 header:
   caption: ""
   image: ""
-title: Posts
+title: Posts del Blog
 type: page
 view: 2
 ---
