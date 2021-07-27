@@ -9,6 +9,16 @@ tags:
 - Regresión
 - Asociado a ggplot2
 - Gráficos
+output:
+  html_document: 
+    toc: yes
+    toc_float:
+      smooth_scroll: yes
+      collapsed: yes
+    toc_depth: 2
+    highlight: pygments
+    code_folding: show
+    keep_md: yes
 ---
 
 # Librarías de Trabajo
@@ -107,4 +117,10 @@ ORplot +
 OR$odds_data %>% as.data.frame()
 ```
 
-Visita [RLatinoamérica Blog](https://www.brackinstitute.com/rlatinoamerica), [Instituto de Ciencias Antonio Brack](https://www.brackinstitute.com/), [Comunidad en Facebook](https://web.facebook.com/groups/686154108929440)
+**Visita:**
+
+-   [RLatinoamérica Blog](https://www.brackinstitute.com/rlatinoamerica)
+
+-   [Instituto de Ciencias Antonio Brack](https://www.brackinstitute.com/)
+
+-   [Comunidad en Facebook](https://web.facebook.com/groups/686154108929440)
