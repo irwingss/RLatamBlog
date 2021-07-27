@@ -8,9 +8,9 @@ light = true
 primary = "#6700ff"
 
 # Menu
-menu_primary = "#3f51b5" # Material 500
+menu_primary = "#6700ff" # Material 500
 menu_text = "#fff"
-menu_text_active = "#ffeb3b" # Material Complemantary 500
+menu_text_active = "#ffd200" # Material Complemantary 500
 menu_title = "#fff"
 
 # Home sections
