@@ -2,7 +2,7 @@
 header:
   caption: ""
   image: ""
-title: Posts del Blog
+title: Posts
 type: page
 view: 2
 ---
