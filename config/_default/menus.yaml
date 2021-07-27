@@ -5,7 +5,7 @@
 
 main:
   - name: Posts del Blog
-    url: '#posts'
+    url: post/
     weight: 10
   - name: Artículos Científicos
     url: '#featured'
