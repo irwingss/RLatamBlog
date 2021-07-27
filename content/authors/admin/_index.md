@@ -3,12 +3,12 @@ bio: s
 
 education:
   courses:
-  - course: MEd en Educacion con mención en Docencia e Investigación Universitaria
-    institution: Universidad San Martin de Porres (Peru)
-    year: 2023
   - course: MSc Inteligencia Analitica de Datos
     institution: Universidad de Los Andes (Colombia)
     year: 2023
+  - course: MEd en Educacion con mención en Docencia e Investigación Universitaria
+    institution: Universidad San Martin de Porres (Peru)
+    year: 2022
   - course: Titulo Biologo
     institution: Universidad Nacional de Trujillo (Peru)
     year: 2016
@@ -19,7 +19,7 @@ education:
 email: "isaldanau@gmail.com"
 highlight_name: true
 interests:
-- Ecoinformatica
+- Ecoinformática
 - Ecoacústica
 - Modelamiento y Machine Learning
 - Ornitología
