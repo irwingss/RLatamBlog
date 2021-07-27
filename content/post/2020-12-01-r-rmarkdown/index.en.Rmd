@@ -2,12 +2,13 @@
 title: 'Tutorial: Gráficos de Odds Ratio con OddsPlotty'
 author: "Irwing S. Saldaña"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
-subtitle: R Latinoamérica
 categories: R
 tags:
-- R Markdown
-- plot
-- regression
+- Odds ratio
+- GLM
+- Regresión
+- Asociado a ggplot2
+- Gráficos
 ---
 
 # Librarías de Trabajo
