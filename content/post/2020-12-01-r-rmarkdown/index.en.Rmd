@@ -10,18 +10,6 @@ tags:
 - regression
 ---
 
-<style type="text/css">
-.main-container {
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-}
-</style>
-
-Visita [RLatinoamérica Blog](https://www.brackinstitute.com/rlatinoamerica), [Instituto de Ciencias Antonio Brack](https://www.brackinstitute.com/), [Comunidad en Facebook](https://web.facebook.com/groups/686154108929440)
-
-<br>
-
 # Librarías de Trabajo
 
 El siguiente código sirve para instalar las librerías a usar:
@@ -117,3 +105,5 @@ ORplot +
 ```{r}
 OR$odds_data %>% as.data.frame()
 ```
+
+Visita [RLatinoamérica Blog](https://www.brackinstitute.com/rlatinoamerica), [Instituto de Ciencias Antonio Brack](https://www.brackinstitute.com/), [Comunidad en Facebook](https://web.facebook.com/groups/686154108929440)
