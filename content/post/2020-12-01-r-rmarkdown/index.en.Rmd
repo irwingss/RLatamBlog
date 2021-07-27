@@ -1,37 +1,124 @@
 ---
-title: "Hello R Markdown"
-author: "Frida Gomam"
+title: "Tutorial: Gráficos de Odds Ratio con OddsPlotty"
+subtitle: "R Latinoamérica"
+author: "Irwing S. Saldaña"
+output: 
+  html_document:
+    css: rlatinoamericablog.css
+    highlight: haddock
+    theme: null
+editor_options:
+  chunk_output_type: console
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 categories: ["R"]
 tags: ["R Markdown", "plot", "regression"]
+
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(collapse = TRUE)
+<style type="text/css">
+.main-container {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+Visita [RLatinoamérica Blog](https://www.brackinstitute.com/rlatinoamerica), [Instituto de Ciencias Antonio Brack](https://www.brackinstitute.com/), [Comunidad en Facebook](https://web.facebook.com/groups/686154108929440)
+
+<br>
+
+# Librarías de Trabajo
+
+El siguiente código sirve para instalar las librerías a usar:
+
+```{r, eval=FALSE}
+install.packages("OddsPlotty")
+install.packages("tidyverse")
+install.packages("mlbench")
+
 ```
 
-# R Markdown
+Ahora, activa las librerías:
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
-fit <- lm(dist ~ speed, data = cars)
-fit
+```{r}
+library(tidyverse)
+library(OddsPlotty)
+library(mlbench) # para cargar la base de datos
 ```
 
-# Including Plots
+<br>
 
-You can also embed plots. See Figure \@ref(fig:pie) for example:
+# Transformación inicial de la base de datos
 
-```{r pie, fig.cap='A fancy pie chart.', tidy=FALSE}
-par(mar = c(0, 1, 0, 1))
-pie(
-  c(280, 60, 20),
-  c('Sky', 'Sunny side of pyramid', 'Shady side of pyramid'),
-  col = c('#0292D8', '#F7EA39', '#C4B632'),
-  init.angle = -50, border = NA
-)
+Este paso no es necesario siempre. El objetivo es eliminar filas sin datos (incompletas), eliminar columnas que no vayan a ser usadas en el modelo GLM, y, para efectos de este ejercicio simple, convertir en numéricas las columnas factor.
+
+```{r}
+# Cargamos la base de datos BreastCancer
+data("BreastCancer")
+
+# Vista previa
+head(BreastCancer)
+
+# Transformación
+BreastCancer <- BreastCancer %>% 
+  select(-1) %>%  # eliminar columnas que se vayan a usar
+  mutate_if(is.factor, as.numeric) %>% # convertir columnas factores a numéricas
+  mutate(Class = factor(Class)) %>% #convertir a factor la variable respuesta
+  filter(complete.cases(.)) # eliminar filas incompletas 
+```
+
+<br>
+
+# Modelo lineal
+
+```{r}
+# Crear el modelo generalizado lineal (GLM): regresión logística
+mod1 <- glm(Class ~ ., data = BreastCancer, family = binomial(link = "logit"))
+
+# Resumen estadístico del modelo
+summary(mod1)
+```
+
+<br>
+
+# Gráfico con OddsPlotty
+
+```{r, fig.align='center', out.width="90%"}
+
+# Gráfico inicial
+OR <- odds_plot(mod1, 
+                title = "Odds Ratios",
+                subtitle = "Factores Asociados al Cáncer de Pulmón",
+                point_col = "#5f00db", 
+                error_bar_colour = "#5f00db",
+                point_size = 1, 
+                error_bar_width = 0.2,
+                h_line_color = "#5f00db")
+OR$odds_plot
+
+# Adicionar un tema, eliminar leyenda y etiqueta del eje Y
+ORplot <- OR$odds_plot+
+  theme_test()+
+  theme(legend.position = "none")+
+  labs(x="")
+ORplot
+
+# Adicionar valores de Odds Ratio 
+ORplot +
+  geom_text(label = round(OR$odds_data$OR, digits = 2), size=3, 
+            hjust = 1.5, vjust = -0.35, color="#5f00db")+
+  # scale_x_discrete() te ayudará a modificar las etiquetas del eje Y.
+  # Por ejemplo, modificar Mitoses por Mitosis, o Cl.thickness por 
+  # Grosor de Cl:
+  scale_x_discrete(expand=c(0.15,0.15),
+                   label = c("Mitoses"="Mitosis",
+                             "Cl.thickness"="Grosor de Cl"))
+```
+
+<br>
+
+# Inspeccionar la información de Odds Ratios
+
+```{r}
+OR$odds_data %>% as.data.frame()
 ```
