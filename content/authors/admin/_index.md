@@ -1,18 +1,22 @@
 ---
-bio: My research interests include distributed robotics, mobile computing and programmable
-  matter.
+bio: Biólogo de la Universidad Nacional de Trujillo (Perú). Investigador CONCYTEC (RENACYT: P0038629), asociado al Instituto de Ciencias Antonio Brack y CINBIOTYC. Me interesa desarrollar el campo de la ecoinformática con un enfoque integrativo, utilizando aplicaciones estadísticas y de aprendizaje automático, para dilucidar los procesos de especiación y evolución que dan forma a la distribución actual y futura de aves de rango-restringido y amenazadas en ecosistemas críticos de los Andes Tropicales.
+
 education:
   courses:
-  - course: PhD in Artificial Intelligence
-    institution: Stanford University
-    year: 2012
-  - course: MEng in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2009
-  - course: BSc in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2008
-email: ""
+  - course: MEd en Educación con mención en Docencia e Investigación Universitaria
+    institution: Universidad de Los Andes (Colombia)
+    year: 2023
+  - course: MSc Inteligencia Analítica de Datos
+    institution: Universidad de Los Andes (Colombia)
+    year: 2023
+  - course: Titulo Biólogo
+    institution: Universidad Nacional de Trujillo (Perú)
+    year: 2016
+  - course: BSc. Ciencias Biológicas
+    institution: Universidad Nacional de Trujillo (Perú)
+    year: 2015
+  
+email: "irwingssaldu@gmail.com"
 highlight_name: false
 interests:
 - Artificial Intelligence
