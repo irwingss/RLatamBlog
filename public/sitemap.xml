@@ -11,13 +11,13 @@
     <loc>https://rlatam.blog/courses/example/stats/</loc>
     <lastmod>2021-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://rlatam.blog/</loc>
-    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://rlatam.blog/talk/example-talk/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rlatam.blog/event/</loc>
+    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rlatam.blog/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rlatam.blog/courses/</loc>
@@ -59,23 +59,23 @@
     <loc>https://rlatam.blog/category/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2020-12-13T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://rlatam.blog/post/2020-12-01-r-rmarkdown/</loc>
+    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
+  </url><url>
+    <loc>https://rlatam.blog/tag/plot/</loc>
+    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
+  </url><url>
+    <loc>https://rlatam.blog/category/r/</loc>
+    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
+  </url><url>
+    <loc>https://rlatam.blog/tag/r-markdown/</loc>
+    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
+  </url><url>
+    <loc>https://rlatam.blog/tag/regression/</loc>
+    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
+  </url><url>
     <loc>https://rlatam.blog/post/writing-technical-content/</loc>
     <lastmod>2019-07-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rlatam.blog/publication-type/3/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rlatam.blog/publication/preprint/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rlatam.blog/publication_types/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rlatam.blog/publication/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rlatam.blog/tag/source-themes/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rlatam.blog/post/jupyter/</loc>
     <lastmod>2019-09-05T00:00:00+00:00</lastmod>
@@ -101,23 +101,8 @@
     <loc>https://rlatam.blog/project/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://rlatam.blog/publication-type/2/</loc>
-    <lastmod>2015-09-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rlatam.blog/publication/journal-article/</loc>
-    <lastmod>2015-09-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rlatam.blog/author/robert-ford/</loc>
-    <lastmod>2015-09-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rlatam.blog/publication-type/1/</loc>
-    <lastmod>2013-07-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rlatam.blog/publication/conference-paper/</loc>
-    <lastmod>2013-07-01T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://rlatam.blog/admin/</loc>
   </url><url>
-    <loc>https://rlatam.blog/author/%E5%90%B3%E6%81%A9%E9%81%94/</loc>
+    <loc>https://rlatam.blog/publication_types/</loc>
   </url>
 </urlset>

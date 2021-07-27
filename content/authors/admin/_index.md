@@ -1,22 +1,22 @@
 ---
-bio: Biólogo de la Universidad Nacional de Trujillo (Perú). Investigador CONCYTEC (RENACYT: P0038629), asociado al Instituto de Ciencias Antonio Brack y CINBIOTYC. Me interesa desarrollar el campo de la ecoinformática con un enfoque integrativo, utilizando aplicaciones estadísticas y de aprendizaje automático, para dilucidar los procesos de especiación y evolución que dan forma a la distribución actual y futura de aves de rango-restringido y amenazadas en ecosistemas críticos de los Andes Tropicales.
+bio: s
 
 education:
   courses:
-  - course: MEd en Educación con mención en Docencia e Investigación Universitaria
+  - course: MEd en Educacion con mención en Docencia e Investigación Universitaria
+    institution: Universidad San Martin de Porres (Peru)
+    year: 2023
+  - course: MSc Inteligencia Analitica de Datos
     institution: Universidad de Los Andes (Colombia)
     year: 2023
-  - course: MSc Inteligencia Analítica de Datos
-    institution: Universidad de Los Andes (Colombia)
-    year: 2023
-  - course: Titulo Biólogo
-    institution: Universidad Nacional de Trujillo (Perú)
+  - course: Titulo Biologo
+    institution: Universidad Nacional de Trujillo (Peru)
     year: 2016
-  - course: BSc. Ciencias Biológicas
-    institution: Universidad Nacional de Trujillo (Perú)
+  - course: BSc. Ciencias Biologicas
+    institution: Universidad Nacional de Trujillo (Peru)
     year: 2015
   
-email: "irwingssaldu@gmail.com"
+email: " "
 highlight_name: false
 interests:
 - Artificial Intelligence
@@ -49,8 +49,7 @@ superuser: true
 title: Nelson Bighetti
 ---
 
-Nelson Bighetti is a professor of artificial intelligence at the Stanford AI Lab. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
-
+Biologo de la Universidad Nacional de Trujillo (Peru). Investigador CONCYTEC (RENACYT: P0038629), asociado al Instituto de Ciencias Antonio Brack y CINBIOTYC. Me interesa desarrollar el campo de la ecoinformatica con un enfoque integrativo, utilizando aplicaciones estadisticas y de aprendizaje automatico, para dilucidar los procesos de especiacion y evolucion que dan forma a la distribución actual y futura de aves de rango-restringido y amenazadas en ecosistemas criticos de los Andes Tropicales.
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/demo_resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
