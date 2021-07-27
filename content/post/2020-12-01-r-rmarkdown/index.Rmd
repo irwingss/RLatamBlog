@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Gráficos de Odds Ratio con OddsPlotty'
+title: 'Gráficos de Odds Ratio con OddsPlotty'
 author: "Irwing S. Saldaña"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 categories: ['R']
@@ -16,6 +16,10 @@ output:
     keep_md: yes
 ---
 
+En este tutorial revisaremos el uso de la nueva librería OddsPlotty para la generación de gráficos de Odds Ratio. 
+
+<br>
+
 # Librarías de Trabajo
 
 El siguiente código sirve para instalar las librerías a usar:
@@ -24,7 +28,6 @@ El siguiente código sirve para instalar las librerías a usar:
 install.packages("OddsPlotty")
 install.packages("tidyverse")
 install.packages("mlbench")
-
 ```
 
 Ahora, activa las librerías:
