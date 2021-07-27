@@ -10,8 +10,8 @@ main:
   - name: Artículos Científicos
     url: papers/
     weight: 20
-  - name: Cursos
-    url: https://www.brackinstitute.com/cursos-y-programas
+  - name: Cursos (masterX)
+    url: https://www.brackinstitute.com/cursos-y-programas 
     weight: 30
   - name: Contacto
     url: mailto:isaldanau@gmail.com
