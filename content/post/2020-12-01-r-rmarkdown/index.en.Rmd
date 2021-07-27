@@ -1,18 +1,13 @@
 ---
-title: "Tutorial: Gráficos de Odds Ratio con OddsPlotty"
-subtitle: "R Latinoamérica"
+title: 'Tutorial: Gráficos de Odds Ratio con OddsPlotty'
 author: "Irwing S. Saldaña"
-output: 
-  html_document:
-    css: rlatinoamericablog.css
-    highlight: haddock
-    theme: null
-editor_options:
-  chunk_output_type: console
 date: "`r format(Sys.time(), '%B %d, %Y')`"
-categories: ["R"]
-tags: ["R Markdown", "plot", "regression"]
-
+subtitle: R Latinoamérica
+categories: R
+tags:
+- R Markdown
+- plot
+- regression
 ---
 
 <style type="text/css">
