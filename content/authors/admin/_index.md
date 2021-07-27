@@ -1,5 +1,5 @@
 ---
-bio: Biólogo
+bio: 
 
 education:
   courses:
