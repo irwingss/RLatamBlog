@@ -50,6 +50,6 @@ superuser: true
 title: Irwing S. Saldaña
 ---
 
-Biólogo de la Universidad Nacional de Trujillo (Perú). Investigador CONCYTEC (RENACYT: P0038629), asociado al Instituto de Ciencias Antonio Brack y CINBIOTYC. Me interesa desarrollar el campo de la ecoinformtica con un enfoque integrativo, utilizando aplicaciones estadísticas y de aprendizaje automático, para dilucidar los procesos de especión y evolución que dan forma a la distribución actual y futura de aves de rango-restringido y amenazadas en ecosistemas críticos de los Andes Tropicales.
+Soy biólogo egresado de la Universidad Nacional de Trujillo (Perú). Investigador CONCYTEC reconocido por el estado peruano (RENACYT: P0038629), asociado al departamento de [Ecoinformática y Biogeografía](https://www.brackinstitute.com/ecoinformatica) del [Instituto de Ciencias Antonio Brack](https://www.brackinstitute.com/) y a CINBIOTYC (https://web.facebook.com/cinbiotyc/). Me interesa el desarrollo de las áreas de ecoinformtica y ecocústica con un enfoque integrativo, utilizando aplicaciones estadísticas y de aprendizaje automático para dilucidar los procesos ecológicos, evolución y asociados a la pérdida de la biodiversidad.
 
 {{< icon name="download" pack="fas" >}} Descarga mi CV {{< staticref "uploads/cv202107.pdf" "newtab" >}}resumé{{< /staticref >}}.
