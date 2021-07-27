@@ -21,8 +21,8 @@ output:
 
 <p>En este tutorial revisaremos el uso de la nueva librería OddsPlotty para la generación de gráficos de Odds Ratio.</p>
 <p><br></p>
-<div id="librarías-de-trabajo" class="section level1">
-<h1>Librarías de Trabajo</h1>
+<div id="librarías-de-trabajo" class="section level2">
+<h2>Librarías de Trabajo</h2>
 <p>El siguiente código sirve para instalar las librerías a usar:</p>
 <pre class="r"><code>install.packages(&quot;OddsPlotty&quot;)
 install.packages(&quot;tidyverse&quot;)
@@ -41,8 +41,8 @@ install.packages(&quot;mlbench&quot;)</code></pre>
 library(mlbench) # para cargar la base de datos</code></pre>
 <p><br></p>
 </div>
-<div id="transformación-inicial-de-la-base-de-datos" class="section level1">
-<h1>Transformación inicial de la base de datos</h1>
+<div id="transformación-inicial-de-la-base-de-datos" class="section level2">
+<h2>Transformación inicial de la base de datos</h2>
 <p>Este paso no es necesario siempre. El objetivo es eliminar filas sin datos (incompletas), eliminar columnas que no vayan a ser usadas en el modelo GLM, y, para efectos de este ejercicio simple, convertir en numéricas las columnas factor.</p>
 <pre class="r"><code># Cargamos la base de datos BreastCancer
 data(&quot;BreastCancer&quot;)
@@ -71,8 +71,8 @@ BreastCancer &lt;- BreastCancer %&gt;%
   filter(complete.cases(.)) # eliminar filas incompletas </code></pre>
 <p><br></p>
 </div>
-<div id="modelo-lineal" class="section level1">
-<h1>Modelo lineal</h1>
+<div id="modelo-lineal" class="section level2">
+<h2>Modelo lineal</h2>
 <pre class="r"><code># Crear el modelo generalizado lineal (GLM): regresión logística
 mod1 &lt;- glm(Class ~ ., data = BreastCancer, family = binomial(link = &quot;logit&quot;))
 
@@ -110,8 +110,8 @@ summary(mod1)</code></pre>
 ## Number of Fisher Scoring iterations: 8</code></pre>
 <p><br></p>
 </div>
-<div id="gráfico-con-oddsplotty" class="section level1">
-<h1>Gráfico con OddsPlotty</h1>
+<div id="gráfico-con-oddsplotty" class="section level2">
+<h2>Gráfico con OddsPlotty</h2>
 <pre class="r"><code># Gráfico inicial
 OR &lt;- odds_plot(mod1, 
                 title = &quot;Odds Ratios&quot;,
@@ -144,8 +144,8 @@ ORplot +
 <p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-5-3.png" width="90%" style="display: block; margin: auto;" /></p>
 <p><br></p>
 </div>
-<div id="inspeccionar-la-información-de-odds-ratios" class="section level1">
-<h1>Inspeccionar la información de Odds Ratios</h1>
+<div id="inspeccionar-la-información-de-odds-ratios" class="section level2">
+<h2>Inspeccionar la información de Odds Ratios</h2>
 <pre class="r"><code>OR$odds_data %&gt;% as.data.frame()</code></pre>
 <pre><code>##          OR     lower    upper            vars
 ## 1 1.7078851 1.3160488 2.311339    Cl.thickness
