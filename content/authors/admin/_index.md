@@ -30,7 +30,7 @@ role: CEO, profesor investigador
 social:
 - icon: envelope
   icon_pack: fas
-  link: /#contact
+  link: mailto:isaldanau@gmail.com
 - display:
     header: true
   icon: twitter
