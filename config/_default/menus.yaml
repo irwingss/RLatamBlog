@@ -13,5 +13,3 @@ main:
   - name: Cursos (masterX)
     url: https://www.brackinstitute.com/cursos-y-programas 
     weight: 30
-  - name: Contacto
-    url: mailto:isaldanau@gmail.com
