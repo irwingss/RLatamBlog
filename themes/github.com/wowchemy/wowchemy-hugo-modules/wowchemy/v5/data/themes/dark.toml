@@ -5,14 +5,13 @@ name = "Dark"
 light = false
 
 # Primary
-primary = "hsl(339, 90%, 68%)"
-
+primary = "#ffd200"
 # Menu
-menu_primary = "rgb(20, 22, 34)"
-menu_text = "rgba(255,255,255,0.6)"
-menu_text_active = "rgba(255,255,255,1)"
+menu_primary = "#202021"
+menu_text = "#ffffff"
+menu_text_active = "#ffd200"
 menu_title = "#fff"
 
 # Home sections
-home_section_odd = "hsla(231, 15%, 18%, 1)"
-home_section_even = "hsla(231, 15%, 16%, 1)"
+home_section_odd = "#202021"
+home_section_even = "#202021"
