@@ -2,13 +2,8 @@
 title: 'Tutorial: Gráficos de Odds Ratio con OddsPlotty'
 author: "Irwing S. Saldaña"
 date: "July 27, 2021"
-categories: R
-tags:
-- Odds ratio
-- GLM
-- Regresión
-- Asociado a ggplot2
-- Gráficos
+categories: ['R']
+tags: ['Odds ratio','GLM','Regresión','Asociado a ggplot2','Gráficos']
 output:
   html_document: 
     toc: yes
@@ -21,7 +16,7 @@ output:
     keep_md: yes
 ---
 
-<script src="{{< blogdown/postref >}}index.en_files/header-attrs/header-attrs.js"></script>
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
 
 
 <div id="librarías-de-trabajo" class="section level1">
@@ -126,14 +121,14 @@ OR &lt;- odds_plot(mod1,
                 h_line_color = &quot;#5f00db&quot;)</code></pre>
 <pre><code>## Waiting for profiling to be done...</code></pre>
 <pre class="r"><code>OR$odds_plot</code></pre>
-<p><img src="{{< blogdown/postref >}}index.en_files/figure-html/unnamed-chunk-5-1.png" width="90%" style="display: block; margin: auto;" /></p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-5-1.png" width="90%" style="display: block; margin: auto;" /></p>
 <pre class="r"><code># Adicionar un tema, eliminar leyenda y etiqueta del eje Y
 ORplot &lt;- OR$odds_plot+
   theme_test()+
   theme(legend.position = &quot;none&quot;)+
   labs(x=&quot;&quot;)
 ORplot</code></pre>
-<p><img src="{{< blogdown/postref >}}index.en_files/figure-html/unnamed-chunk-5-2.png" width="90%" style="display: block; margin: auto;" /></p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-5-2.png" width="90%" style="display: block; margin: auto;" /></p>
 <pre class="r"><code># Adicionar valores de Odds Ratio 
 ORplot +
   geom_text(label = round(OR$odds_data$OR, digits = 2), size=3, 
@@ -144,7 +139,7 @@ ORplot +
   scale_x_discrete(expand=c(0.15,0.15),
                    label = c(&quot;Mitoses&quot;=&quot;Mitosis&quot;,
                              &quot;Cl.thickness&quot;=&quot;Grosor de Cl&quot;))</code></pre>
-<p><img src="{{< blogdown/postref >}}index.en_files/figure-html/unnamed-chunk-5-3.png" width="90%" style="display: block; margin: auto;" /></p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-5-3.png" width="90%" style="display: block; margin: auto;" /></p>
 <p><br></p>
 </div>
 <div id="inspeccionar-la-información-de-odds-ratios" class="section level1">
@@ -162,8 +157,8 @@ ORplot +
 ## 9 1.7135219 0.9926455 3.025957         Mitoses</code></pre>
 <p><strong>Visita:</strong></p>
 <ul>
-<li><p><a href="https://www.brackinstitute.com/rlatinoamerica">RLatinoamérica Blog</a></p></li>
-<li><p><a href="https://www.brackinstitute.com/">Instituto de Ciencias Antonio Brack</a></p></li>
-<li><p><a href="https://web.facebook.com/groups/686154108929440">Comunidad en Facebook</a></p></li>
+<li><p><a href="https://www.brackinstitute.com/">Instituto de Ciencias Antonio Brack [website]</a></p></li>
+<li><p><a href="https://web.facebook.com/brackinstitute/">Fan page [Facebook]</a></p></li>
+<li><p><a href="https://web.facebook.com/groups/686154108929440">Comunidad RLatam [Facebook]</a></p></li>
 </ul>
 </div>

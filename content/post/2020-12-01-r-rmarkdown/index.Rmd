@@ -2,13 +2,8 @@
 title: 'Tutorial: Gráficos de Odds Ratio con OddsPlotty'
 author: "Irwing S. Saldaña"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
-categories: R
-tags:
-- Odds ratio
-- GLM
-- Regresión
-- Asociado a ggplot2
-- Gráficos
+categories: ['R']
+tags: ['Odds ratio','GLM','Regresión','Asociado a ggplot2','Gráficos']
 output:
   html_document: 
     toc: yes
@@ -119,8 +114,8 @@ OR$odds_data %>% as.data.frame()
 
 **Visita:**
 
--   [RLatinoamérica Blog](https://www.brackinstitute.com/rlatinoamerica)
+-   [Instituto de Ciencias Antonio Brack [website]](https://www.brackinstitute.com/)
 
--   [Instituto de Ciencias Antonio Brack](https://www.brackinstitute.com/)
+-   [Fan page [Facebook]](https://web.facebook.com/brackinstitute/)
 
--   [Comunidad en Facebook](https://web.facebook.com/groups/686154108929440)
+-   [Comunidad RLatam [Facebook]](https://web.facebook.com/groups/686154108929440)
