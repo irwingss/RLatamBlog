@@ -32,7 +32,7 @@ install.packages("mlbench")
 
 Ahora, activa las librerías:
 
-```{r}
+```{r, warning=F, message=F}
 library(tidyverse)
 library(OddsPlotty)
 library(mlbench) # para cargar la base de datos
