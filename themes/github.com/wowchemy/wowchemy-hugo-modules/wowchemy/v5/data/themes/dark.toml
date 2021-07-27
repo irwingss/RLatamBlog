@@ -6,6 +6,7 @@ light = false
 
 # Primary
 primary = "#ffd200"
+
 # Menu
 menu_primary = "#202021"
 menu_text = "#ffffff"
