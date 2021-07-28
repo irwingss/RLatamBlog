@@ -29,7 +29,7 @@ chisq.test(x, correct = TRUE)
 
 <br>
 
-**Video explicativo**
+### **Video explicativo**
 
 ```{=html}
     <iframe
@@ -44,7 +44,7 @@ chisq.test(x, correct = TRUE)
 ```
 <br>
 
-**Librarías de Trabajo**
+### **Librarías de Trabajo**
 
 El siguiente código sirve para instalar las librerías a usar:
 
