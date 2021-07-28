@@ -11,9 +11,9 @@ editor_options:
 
 La **prueba de chi cuadrado** es una prueba estadística sencilla que puede ser usada cuando se tienen datos de recuento de ocurrencias de categorías. El análisis puede ser definido como una:
 
--   **Prueba de conteos iguales:** para identificar si los conteos observados son estadísticamente diferentes entre sí.
+-   **Prueba de diferencia de conteos:** para identificar si los conteos observados en las categorías de una variable son estadísticamente diferentes entre sí.
 
--   **Prueba de conteos con probabilidades específicas:** identifica si los conteos observados son estadísticamente diferentes entre sí dado que cada evento tiene una probabilidad de ocurrencia diferente a los otros. Para estas hay que especificar las probabilidades como un vector en el argumento `p` de la función. Para fines de este tutorial no veremos el detalle de esta prueba.
+-   **Prueba de diferencia de conteos con probabilidades específicas:** identifica si los conteos observados en las categorías de una variable son estadísticamente diferentes entre sí dado que cada evento tiene una probabilidad de ocurrencia definida. Se debe especificar las probabilidades como un vector en el argumento `p` de la función. Para fines de este tutorial no veremos el detalle de esta prueba.
 
 -   **Prueba de independencia de dos factores:** identifica a nivel estadístico si las categorías de dos variables están asociadas o son independientes.
 
