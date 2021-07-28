@@ -9,7 +9,7 @@ editor_options:
   chunk_output_type: console
 ---
 
-La **prueba de chi cuadrado es** una prueba estadística sencilla que puede ser usada cuando se tienen datos de recuento de ocurrencias de categorías. Puede ser como una:
+La **prueba de chi cuadrado es** una prueba estadística sencilla que puede ser usada cuando se tienen datos de recuento de ocurrencias de categorías. El análisis puede ser definido como una:
 
 -   **Prueba de conteos iguales:** para identificar si los conteos observados son estadísticamente diferentes entre sí.
 
