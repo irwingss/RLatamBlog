@@ -11,6 +11,10 @@ En este tutorial revisaremos el uso de la nueva librería OddsPlotty para la gen
 
 <br>
 
+## Video explicativo
+
+https://www.youtube.com/watch?v=0KIBd4S6rt8&t=3s
+
 ## Librarías de Trabajo
 
 El siguiente código sirve para instalar las librerías a usar:
