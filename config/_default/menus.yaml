@@ -7,8 +7,8 @@ main:
   - name: Blog
     url: post/
     weight: 10
-  - name: Artículos
-    url: papers/
+  - name: Canal de Youtube
+    url: https://www.youtube.com/channel/UCOTqfoQKMc61N_za-R6Ve7Q
     weight: 20
   - name: Cursos (masterX)
     url: https://www.brackinstitute.com/cursos-y-programas 
