@@ -5,7 +5,7 @@ name = "Ocean"
 light = true
 
 # Primary
-primary = "#6700ff"
+primary = "#ffd200"
 
 # Menu
 menu_primary = "#6700ff" # Material 500
