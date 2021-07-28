@@ -2,8 +2,8 @@
 title: 'Test de Independencia de Chi cuadrado usando R' 
 author: "Irwing S. Saldaña" 
 date: "27 July, 2021"
-categories: ['R'] 
-tags: ['Odds ratio','GLM','Regresión','Asociado a ggplot2','Gráficos'] 
+categories: ['R', 'Estadística Básica'] 
+tags: ['Chi cuadrado','Dos factores','Gráficos'] 
 output: html_document
 editor_options: 
   chunk_output_type: console
@@ -12,14 +12,17 @@ editor_options:
 <script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
 
 
-<p>La <strong>prueba de chi cuadrado es</strong> una prueba estadística sencilla que puede ser usada cuando se tienen datos de recuento de ocurrencias de categorías. Puede ser como una:</p>
+<p>La <strong>prueba de chi cuadrado es</strong> una prueba estadística sencilla que puede ser usada cuando se tienen datos de recuento de ocurrencias de categorías. El análisis puede ser definido como una:</p>
 <ul>
 <li><p><strong>Prueba de conteos iguales:</strong> para identificar si los conteos observados son estadísticamente diferentes entre sí.</p></li>
 <li><p><strong>Prueba de conteos con probabilidades específicas:</strong> identifica si los conteos observados son estadísticamente diferentes entre sí dado que cada evento tiene una probabilidad de ocurrencia diferente a los otros. Para estas hay que especificar las probabilidades como un vector en el argumento <code>p</code> de la función. Para fines de este tutorial no veremos el detalle de esta prueba.</p></li>
 <li><p><strong>Prueba de independencia de dos factores:</strong> identifica a nivel estadístico si las categorías de dos variables están asociadas o son independientes.</p></li>
 </ul>
 <p>En R, la función nativa básica para el cálculo de esta prueba es:</p>
-<pre class="r"><code># Debemos tener en cuenta que la prueba tiene la corrección de Yates activa por defecto. Debemos modificar el argumento correct si deseamos activarla o desactivarla.
+<pre class="r"><code># Debemos tener en cuenta que la prueba tiene 
+# la corrección de Yates activa por defecto. 
+# Debemos modificar el argumento correct si 
+# deseamos activarla o desactivarla.
 chisq.test(x, correct = TRUE)</code></pre>
 <p><strong>Video explicativo</strong></p>
     <iframe
@@ -244,7 +247,7 @@ corrplot::corrplot(resGrados$residuals, is.cor = FALSE,
 </div>
 <div id="nivel-de-asociación" class="section level2">
 <h2><strong>Nivel de asociación</strong></h2>
-<p>Una vez que determinamos que existe dependencia entre las dos variables es posible que querramos conocer el nivel de dicha dependencia o asociación. Para este fin recurriremos a el coeficiente de contingencia o a índices como la V de Cramer. En particular, se recomienda el uso del coeficiente de contingencia para tablas más grandes que 5x5, mientras que para tablas pequeñas la V de Cramer es el indicador de asociación más popular. En R hay varias funciones que entregan estos resultados, aquí revisaremos dos de ellas.</p>
+<p>Una vez que determinamos que existe dependencia entre las dos variables es posible que queramos conocer el nivel de dicha dependencia o asociación. Para este fin recurriremos a el <code>coeficiente de contingencia</code> o a índices como la <code>V de Cramer</code>. En particular, se recomienda el uso del coeficiente de contingencia para tablas más grandes que 5x5, mientras que para tablas pequeñas la V de Cramer es el indicador de asociación más popular. En R hay varias funciones que entregan estos resultados, aquí revisaremos dos de ellas.</p>
 <pre class="r"><code># Para matrices de contingencia
 vcd::assocstats(as.matrix(grados))</code></pre>
 <pre><code>##                     X^2 df P(&gt; X^2)
@@ -306,7 +309,7 @@ vcd::assocstats(table(dataMejora))</code></pre>
 </div>
 <div id="gráficos-de-recuentos" class="section level2">
 <h2><strong>Gráficos de recuentos</strong></h2>
-<p>La librería CGPfunctions provee una forma muy sencilla de graficar los conteos usando una tabla larga de datos con ambas variables categóricas en ella.</p>
+<p>La librería <code>CGPfunctions</code> provee una forma muy sencilla de graficar los conteos usando una tabla larga de datos con ambas variables categóricas en ella.</p>
 <pre class="r"><code># Gráfico para el estudio de Grados vs Nivel
 CGPfunctions::PlotXTabs(gradosLarga, Grados, Nivel)</code></pre>
 <pre><code>## Plotted dataset gradosLarga variables Grados by Nivel</code></pre>

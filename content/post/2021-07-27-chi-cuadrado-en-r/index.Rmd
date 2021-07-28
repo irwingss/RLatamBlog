@@ -2,8 +2,8 @@
 title: 'Test de Independencia de Chi cuadrado usando R' 
 author: "Irwing S. Saldaña" 
 date: "`r format(Sys.time(), '%d %B, %Y')`"
-categories: ['R'] 
-tags: ['Odds ratio','GLM','Regresión','Asociado a ggplot2','Gráficos'] 
+categories: ['R', 'Estadística Básica'] 
+tags: ['Chi cuadrado','Dos factores','Gráficos'] 
 output: html_document
 editor_options: 
   chunk_output_type: console
@@ -20,7 +20,10 @@ La **prueba de chi cuadrado es** una prueba estadística sencilla que puede ser 
 En R, la función nativa básica para el cálculo de esta prueba es:
 
 ```{r, eval=F}
-# Debemos tener en cuenta que la prueba tiene la corrección de Yates activa por defecto. Debemos modificar el argumento correct si deseamos activarla o desactivarla.
+# Debemos tener en cuenta que la prueba tiene 
+# la corrección de Yates activa por defecto. 
+# Debemos modificar el argumento correct si 
+# deseamos activarla o desactivarla.
 chisq.test(x, correct = TRUE)
 ```
 
@@ -205,7 +208,7 @@ corrplot::corrplot(resGrados$residuals, is.cor = FALSE,
 
 ## **Nivel de asociación**
 
-Una vez que determinamos que existe dependencia entre las dos variables es posible que querramos conocer el nivel de dicha dependencia o asociación. Para este fin recurriremos a el coeficiente de contingencia o a índices como la V de Cramer. En particular, se recomienda el uso del coeficiente de contingencia para tablas más grandes que 5x5, mientras que para tablas pequeñas la V de Cramer es el indicador de asociación más popular. En R hay varias funciones que entregan estos resultados, aquí revisaremos dos de ellas.
+Una vez que determinamos que existe dependencia entre las dos variables es posible que queramos conocer el nivel de dicha dependencia o asociación. Para este fin recurriremos a el `coeficiente de contingencia` o a índices como la `V de Cramer`. En particular, se recomienda el uso del coeficiente de contingencia para tablas más grandes que 5x5, mientras que para tablas pequeñas la V de Cramer es el indicador de asociación más popular. En R hay varias funciones que entregan estos resultados, aquí revisaremos dos de ellas.
 
 ```{r}
 # Para matrices de contingencia
@@ -222,7 +225,7 @@ Dado el tamaño de las matrices de contingencia, tomaremos como valor de interé
 
 ## **Gráficos de recuentos**
 
-La librería CGPfunctions provee una forma muy sencilla de graficar los conteos usando una tabla larga de datos con ambas variables categóricas en ella.
+La librería `CGPfunctions` provee una forma muy sencilla de graficar los conteos usando una tabla larga de datos con ambas variables categóricas en ella.
 
 ```{r}
 # Gráfico para el estudio de Grados vs Nivel
