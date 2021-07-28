@@ -7,7 +7,7 @@ widget: pages
 headless: true
 
 # Order that this section appears on the page.
-weight: 90
+weight: 30
 
 title: Canal R Latinoamérica
 subtitle: ''
@@ -17,4 +17,3 @@ subtitle: ''
 <iframe class="youtube-player" type="text/html" width="65%" height="500" src="http://www.youtube.com/channel/UCOTqfoQKMc61N_za-R6Ve7Q" frameborder="0">
 </iframe>
 ```
-{{% callout note %}} Quickly discover relevant content by [filtering publications](./publication/). {{% /callout %}}
