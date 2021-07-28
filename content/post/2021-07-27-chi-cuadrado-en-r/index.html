@@ -127,8 +127,8 @@ gradosLarga</code></pre>
 ## 10 1     Grado1
 ## # ... with 44,507 more rows</code></pre>
 </div>
-<div id="prueba-de-conteos-iguales" class="section level2">
-<h2><strong>1. Prueba de conteos iguales</strong></h2>
+<div id="chi-cuadrado-para-conteos" class="section level1">
+<h1><strong>Chi cuadrado para conteos</strong></h1>
 <p>Se desea evaluar si existe diferencia entre la cantidad (recuento) de las personas inscritas en todos los grados para el primer nivel de la tabla <code>grados</code> podemos hacer un test de chi cuadrado sencillo:</p>
 <pre class="r"><code># Separar la base de datos de grados
 inscritos &lt;- grados[1,]
@@ -158,8 +158,8 @@ resX2</code></pre>
 </ul>
 <p>El <strong>p-valor &lt; 2.2e-16</strong> es menor a el p-valor crítico de 0.05, por lo que <strong>se rechaza H0</strong>, y decimos que existe diferencia entre los recuentos de las personas inscritas en los diferentes grados evaluados.</p>
 </div>
-<div id="prueba-de-independencia-de-dos-factores" class="section level2">
-<h2><strong>2. Prueba de independencia de dos factores</strong></h2>
+<div id="chi-cuadrado-de-independencia-de-dos-factores" class="section level1">
+<h1><strong>Chi cuadrado de independencia de dos factores</strong></h1>
 <p>Es el uso más típico de la prueba es el contrastar si los niveles de dos factores, es decir, de dos variables categóricas, son independientes o existe evidencia estadística de asociación entre ellas.</p>
 <p>Las hipótesis a contrastar son:</p>
 <ul>
@@ -193,7 +193,6 @@ chisq.test(matrizDesdeTablaLarga, correct = FALSE)</code></pre>
 ## data:  matrizDesdeTablaLarga
 ## X-squared = 5.5569, df = 1, p-value = 0.01841</code></pre>
 <p>El <strong>p-valor &lt; 0.01841</strong> es menor a el p-valor crítico de 0.05, por lo que <strong>se rechaza H0</strong>, y decimos que la mejora (improvement) y el tratamiento (treatment) son dependientes.</p>
-</div>
 <div id="corrección-de-yates" class="section level2">
 <h2><strong>Corrección de Yates</strong></h2>
 <p>Es buena práctica realizar la prueba de Chi cuadrado sin corrección, observar los valores esperados y detectar si alguno de ellos es menor a 5. Si eso ocurre, se debe aplicar la corrección de Yates para corregir el cálculo del p-valor.</p>
@@ -334,4 +333,5 @@ CGPfunctions::PlotXTabs(gradosLarga, Grados, Nivel, plottype=&quot;percent&quot;
 <li><p><a href="https://web.facebook.com/brackinstitute/">Fan page [Facebook]</a></p></li>
 <li><p><a href="https://web.facebook.com/groups/686154108929440">Comunidad RLatam [Facebook]</a></p></li>
 </ul>
+</div>
 </div>
