@@ -1,4 +1,4 @@
---- 
+---
 title: 'Gráficos de Odds Ratio con OddsPlotty' 
 author: "Irwing S. Saldaña" 
 date: "July 27, 2021" 
@@ -11,14 +11,16 @@ En este tutorial revisaremos el uso de la nueva librería OddsPlotty para la gen
 
 <br>
 
-## Video explicativo
+## **Video explicativo**
+
 ```{=html}
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube.com/embed/0KIBd4S6rt8?autoplay=1" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="Video explicativo"></iframe>
 </div>
 ```
-<br>
-## Librarías de Trabajo
+<br> 
+
+## **Librarías de Trabajo **
 
 El siguiente código sirve para instalar las librerías a usar:
 
@@ -38,7 +40,7 @@ library(mlbench) # para cargar la base de datos
 
 <br>
 
-## Transformación inicial de la base de datos
+## **Transformación inicial de la base de datos**
 
 Este paso no es necesario siempre. El objetivo es eliminar filas sin datos (incompletas), eliminar columnas que no vayan a ser usadas en el modelo GLM, y, para efectos de este ejercicio simple, convertir en numéricas las columnas factor.
 
@@ -59,7 +61,7 @@ BreastCancer <- BreastCancer %>%
 
 <br>
 
-## Modelo lineal
+## **Modelo lineal**
 
 ```{r}
 # Crear el modelo generalizado lineal (GLM): regresión logística
@@ -71,7 +73,7 @@ summary(mod1)
 
 <br>
 
-## Gráfico con OddsPlotty
+## **Gráfico con OddsPlotty**
 
 ```{r, fig.align='center', out.width="90%"}
 
@@ -107,7 +109,7 @@ ORplot +
 
 <br>
 
-## Inspeccionar la información de Odds Ratios
+## **Inspeccionar la información de Odds Ratios**
 
 ```{r}
 OR$odds_data %>% as.data.frame()

@@ -1,4 +1,4 @@
---- 
+---
 title: 'Gráficos de Odds Ratio con OddsPlotty' 
 author: "Irwing S. Saldaña" 
 date: "July 27, 2021" 
@@ -13,12 +13,14 @@ output: html_document
 <p>En este tutorial revisaremos el uso de la nueva librería OddsPlotty para la generación de gráficos de Odds Ratio.</p>
 <p><br></p>
 <div id="video-explicativo" class="section level2">
-<h2>Video explicativo</h2>
+<h2><strong>Video explicativo</strong></h2>
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube.com/embed/0KIBd4S6rt8?autoplay=1" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="Video explicativo"></iframe>
 </div>
-<p><br>
-## Librarías de Trabajo</p>
+<p><br></p>
+</div>
+<div id="librarías-de-trabajo" class="section level2">
+<h2><strong>Librarías de Trabajo </strong></h2>
 <p>El siguiente código sirve para instalar las librerías a usar:</p>
 <pre class="r"><code>install.packages(&quot;OddsPlotty&quot;)
 install.packages(&quot;tidyverse&quot;)
@@ -30,7 +32,7 @@ library(mlbench) # para cargar la base de datos</code></pre>
 <p><br></p>
 </div>
 <div id="transformación-inicial-de-la-base-de-datos" class="section level2">
-<h2>Transformación inicial de la base de datos</h2>
+<h2><strong>Transformación inicial de la base de datos</strong></h2>
 <p>Este paso no es necesario siempre. El objetivo es eliminar filas sin datos (incompletas), eliminar columnas que no vayan a ser usadas en el modelo GLM, y, para efectos de este ejercicio simple, convertir en numéricas las columnas factor.</p>
 <pre class="r"><code># Cargamos la base de datos BreastCancer
 data(&quot;BreastCancer&quot;)
@@ -60,7 +62,7 @@ BreastCancer &lt;- BreastCancer %&gt;%
 <p><br></p>
 </div>
 <div id="modelo-lineal" class="section level2">
-<h2>Modelo lineal</h2>
+<h2><strong>Modelo lineal</strong></h2>
 <pre class="r"><code># Crear el modelo generalizado lineal (GLM): regresión logística
 mod1 &lt;- glm(Class ~ ., data = BreastCancer, family = binomial(link = &quot;logit&quot;))
 
@@ -99,7 +101,7 @@ summary(mod1)</code></pre>
 <p><br></p>
 </div>
 <div id="gráfico-con-oddsplotty" class="section level2">
-<h2>Gráfico con OddsPlotty</h2>
+<h2><strong>Gráfico con OddsPlotty</strong></h2>
 <pre class="r"><code># Gráfico inicial
 OR &lt;- odds_plot(mod1, 
                 title = &quot;Odds Ratios&quot;,
@@ -133,7 +135,7 @@ ORplot +
 <p><br></p>
 </div>
 <div id="inspeccionar-la-información-de-odds-ratios" class="section level2">
-<h2>Inspeccionar la información de Odds Ratios</h2>
+<h2><strong>Inspeccionar la información de Odds Ratios</strong></h2>
 <pre class="r"><code>OR$odds_data %&gt;% as.data.frame()</code></pre>
 <pre><code>##          OR     lower    upper            vars
 ## 1 1.7078851 1.3160488 2.311339    Cl.thickness
