@@ -12,10 +12,10 @@ editor_options:
 <script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
 
 
-<p>La <strong>prueba de chi cuadrado es</strong> una prueba estadística sencilla que puede ser usada cuando se tienen datos de recuento de ocurrencias de categorías. El análisis puede ser definido como una:</p>
+<p>La <strong>prueba de chi cuadrado</strong> es una prueba estadística sencilla que puede ser usada cuando se tienen datos de recuento de ocurrencias de categorías. El análisis puede ser definido como una:</p>
 <ul>
-<li><p><strong>Prueba de conteos iguales:</strong> para identificar si los conteos observados son estadísticamente diferentes entre sí.</p></li>
-<li><p><strong>Prueba de conteos con probabilidades específicas:</strong> identifica si los conteos observados son estadísticamente diferentes entre sí dado que cada evento tiene una probabilidad de ocurrencia diferente a los otros. Para estas hay que especificar las probabilidades como un vector en el argumento <code>p</code> de la función. Para fines de este tutorial no veremos el detalle de esta prueba.</p></li>
+<li><p><strong>Prueba de diferencia de conteos:</strong> para identificar si los conteos observados en las categorías de una variable son estadísticamente diferentes entre sí.</p></li>
+<li><p><strong>Prueba de diferencia de conteos con probabilidades específicas:</strong> identifica si los conteos observados en las categorías de una variable son estadísticamente diferentes entre sí dado que cada evento tiene una probabilidad de ocurrencia definida. Se debe especificar las probabilidades como un vector en el argumento <code>p</code> de la función. Para fines de este tutorial no veremos el detalle de esta prueba.</p></li>
 <li><p><strong>Prueba de independencia de dos factores:</strong> identifica a nivel estadístico si las categorías de dos variables están asociadas o son independientes.</p></li>
 </ul>
 <p>En R, la función nativa básica para el cálculo de esta prueba es:</p>
@@ -24,6 +24,7 @@ editor_options:
 # Debemos modificar el argumento correct si 
 # deseamos activarla o desactivarla.
 chisq.test(x, correct = TRUE)</code></pre>
+<p><br></p>
 <p><strong>Video explicativo</strong></p>
     <iframe
         width="640"
@@ -34,6 +35,7 @@ chisq.test(x, correct = TRUE)</code></pre>
         allowfullscreen
     >
     </iframe>
+<p><br></p>
 <p><strong>Librarías de Trabajo</strong></p>
 <p>El siguiente código sirve para instalar las librerías a usar:</p>
 <pre class="r"><code>install.packages(&quot;tidyverse&quot;)
@@ -230,7 +232,7 @@ resGrados$expected &gt; 5</code></pre>
 </div>
 <div id="categorías-que-más-contribuyen-al-score-de-la-prueba" class="section level2">
 <h2><strong>Categorías que más contribuyen al score de la prueba</strong></h2>
-<p>Se puede conocer cuál es el aporte al score de chi cuadrado de cada categoría en las dos variables contrastadas visualizando los residuales (diferencia entre el valor esperado y el observado) en cada casilla.</p>
+<p>Se puede conocer cuál es el aporte al score de Chi Cuadrado de cada categoría en las dos variables contrastadas visualizando los <strong>residuales</strong> (diferencia entre el valor esperado y el observado) en cada casilla.</p>
 <pre class="r"><code># Resultados textuales
 round(resGrados$residuals, 3)</code></pre>
 <pre><code>##       Grado1  Grado2  Grado3  Grado4  Grado5
@@ -304,7 +306,7 @@ vcd::assocstats(table(dataMejora))</code></pre>
 ## Uncertainty Coeff. R|C   0.0387 -0.0243  0.1017
 ## Uncertainty Coeff. sym   0.0391 -0.0244  0.1026
 ## Mutual Information       0.0387       -       -</code></pre>
-<p>Dado el tamaño de las matrices de contingencia, tomaremos como valor de interés a la V de Cramer. El valor va de 0, asociación nula, a 1, máxima dependencia. Para el estudio de niveles vs grados, se obtiene v = 0.25, por lo que podemos concluir que la asociación entre las variables es baja. Lo mismo ocurre para el estudio de la asociación entre el tratamiento (treatment) y la mejora (improvement) con v = 0.23.</p>
+<p>Dado el tamaño de las matrices de contingencia, tomaremos como valor de interés a la V de Cramer. El valor va de 0, asociación nula, a 1, máxima dependencia. Para el estudio de niveles vs grados, se obtiene <code>v = 0.25</code>, por lo que podemos concluir que la asociación entre las variables es baja. Lo mismo ocurre para el estudio de la asociación entre el tratamiento (treatment) y la mejora (improvement) con <code>v = 0.23</code>.</p>
 </div>
 <div id="gráficos-de-recuentos" class="section level2">
 <h2><strong>Gráficos de recuentos</strong></h2>

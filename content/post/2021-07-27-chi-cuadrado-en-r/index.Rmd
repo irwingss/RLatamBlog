@@ -27,6 +27,8 @@ En R, la función nativa básica para el cálculo de esta prueba es:
 chisq.test(x, correct = TRUE)
 ```
 
+<br>
+
 **Video explicativo**
 
 ```{=html}
@@ -40,6 +42,8 @@ chisq.test(x, correct = TRUE)
     >
     </iframe>
 ```
+<br>
+
 **Librarías de Trabajo**
 
 El siguiente código sirve para instalar las librerías a usar:
