@@ -13,7 +13,7 @@ En este tutorial revisaremos el uso de la nueva librería OddsPlotty para la gen
 
 ## Video explicativo
 
-https://www.youtube.com/watch?v=0KIBd4S6rt8&t=3s
+{{< youtube id="0KIBd4S6rt8&t=3s" autoplay = "true" >}}
 
 ## Librarías de Trabajo
 
