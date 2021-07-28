@@ -9,7 +9,7 @@ editor_options:
   chunk_output_type: console
 ---
 
-La **prueba de chi cuadrado es** una prueba estadística sencilla que puede ser usada cuando se tienen datos de recuento de ocurrencias de categorías. El análisis puede ser definido como una:
+La **prueba de chi cuadrado** es una prueba estadística sencilla que puede ser usada cuando se tienen datos de recuento de ocurrencias de categorías. El análisis puede ser definido como una:
 
 -   **Prueba de conteos iguales:** para identificar si los conteos observados son estadísticamente diferentes entre sí.
 
@@ -194,7 +194,7 @@ En ambos casos presentados no es necesario realizar la corrección de Yates.
 
 ## **Categorías que más contribuyen al score de la prueba**
 
-Se puede conocer cuál es el aporte al score de chi cuadrado de cada categoría en las dos variables contrastadas visualizando los residuales (diferencia entre el valor esperado y el observado) en cada casilla.
+Se puede conocer cuál es el aporte al score de Chi Cuadrado de cada categoría en las dos variables contrastadas visualizando los **residuales** (diferencia entre el valor esperado y el observado) en cada casilla.
 
 ```{r}
 # Resultados textuales
@@ -221,7 +221,7 @@ vcd::assocstats(table(dataMejora))
 DescTools::Assocs(table(dataMejora))
 ```
 
-Dado el tamaño de las matrices de contingencia, tomaremos como valor de interés a la V de Cramer. El valor va de 0, asociación nula, a 1, máxima dependencia. Para el estudio de niveles vs grados, se obtiene v = 0.25, por lo que podemos concluir que la asociación entre las variables es baja. Lo mismo ocurre para el estudio de la asociación entre el tratamiento (treatment) y la mejora (improvement) con v = 0.23.
+Dado el tamaño de las matrices de contingencia, tomaremos como valor de interés a la V de Cramer. El valor va de 0, asociación nula, a 1, máxima dependencia. Para el estudio de niveles vs grados, se obtiene `v = 0.25`, por lo que podemos concluir que la asociación entre las variables es baja. Lo mismo ocurre para el estudio de la asociación entre el tratamiento (treatment) y la mejora (improvement) con `v = 0.23`.
 
 ## **Gráficos de recuentos**
 
