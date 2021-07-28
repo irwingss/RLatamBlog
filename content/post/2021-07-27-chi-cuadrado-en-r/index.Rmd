@@ -254,3 +254,5 @@ CGPfunctions::PlotXTabs(gradosLarga, Grados, Nivel, plottype="percent")
 -   [Fan page [Facebook]](https://web.facebook.com/brackinstitute/)
 
 -   [Comunidad RLatam [Facebook]](https://web.facebook.com/groups/686154108929440)
+
+[Comment](https://twitter.com/irssald/status/1420198624944869377)
