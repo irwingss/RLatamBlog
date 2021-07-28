@@ -15,7 +15,14 @@ subtitle: ''
 
 ```{=html}
 
-<iframe class="youtube-player" type="text/html" width="500" height="500" src="http://www.youtube.com/channel/UCOTqfoQKMc61N_za-R6Ve7Q" frameborder="0">
+<iframe
+    onload="javascript:this.style.height = this.contentWindow.document.body.scrollHeight + 'px';"
+    scrolling="no"
+    height="600"
+    marginheight="0"
+    frameborder="0"
+    width="480"
+    src="https://www.youtube.com/channel/UCOTqfoQKMc61N_za-R6Ve7Q">
 </iframe>
 
 ```
