@@ -1,7 +1,7 @@
 ---
 title: 'Test de Independencia de Chi cuadrado usando R' 
 author: "Irwing S. Saldaña" 
-date: "27 July, 2021"
+date: "29 July, 2021"
 categories: ['R', 'Estadística Básica'] 
 tags: ['Chi cuadrado','Dos factores','Gráficos'] 
 output: html_document
@@ -112,21 +112,7 @@ grados%&gt;%
   rename(Nivel = rowname) -&gt; gradosLarga
 
 # Visualizar el tibble
-gradosLarga</code></pre>
-<pre><code>## # A tibble: 44,517 x 2
-##    Nivel Grados
-##    &lt;chr&gt; &lt;chr&gt; 
-##  1 1     Grado1
-##  2 1     Grado1
-##  3 1     Grado1
-##  4 1     Grado1
-##  5 1     Grado1
-##  6 1     Grado1
-##  7 1     Grado1
-##  8 1     Grado1
-##  9 1     Grado1
-## 10 1     Grado1
-## # ... with 44,507 more rows</code></pre>
+View(gradosLarga)</code></pre>
 </div>
 <div id="chi-cuadrado-para-conteos" class="section level1">
 <h1><strong>Chi cuadrado para conteos</strong></h1>
@@ -245,6 +231,26 @@ corrplot::corrplot(resGrados$residuals, is.cor = FALSE,
          tl.col = &quot;black&quot;)</code></pre>
 <p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
 </div>
+<div id="gráficos-de-mosaico" class="section level2">
+<h2><strong>Gráficos de Mosaico</strong></h2>
+<pre class="r"><code># Gráfico de mosaico simple
+vcd::mosaic(~ Nivel, data=gradosLarga)</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<pre class="r"><code>vcd::mosaic(~ Grados, data=gradosLarga)</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-12-2.png" width="672" /></p>
+<pre class="r"><code># Gráfico de mosaico para ambas variables
+vcd::mosaic(Grados~ Nivel, data=gradosLarga)</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-12-3.png" width="672" /></p>
+<pre class="r"><code>vcd::doubledecker(Grados~Nivel, data=gradosLarga)</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-12-4.png" width="672" /></p>
+<pre class="r"><code># Gráfico de mosaico para ambas variables sombreado por su nivel de aporte
+vcd::mosaic(~ Nivel  + Grados,
+            direction = c(&quot;v&quot;, &quot;h&quot;),
+            data = gradosLarga,
+            shade = TRUE, 
+            spacing = vcd::spacing_equal(sp = unit(0.3, &quot;lines&quot;)))</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-12-5.png" width="672" /></p>
+</div>
 <div id="nivel-de-asociación" class="section level2">
 <h2><strong>Nivel de asociación</strong></h2>
 <p>Una vez que determinamos que existe dependencia entre las dos variables es posible que queramos conocer el nivel de dicha dependencia o asociación. Para este fin recurriremos a el <code>coeficiente de contingencia</code> o a índices como la <code>V de Cramer</code>. En particular, se recomienda el uso del coeficiente de contingencia para tablas más grandes que 5x5, mientras que para tablas pequeñas la V de Cramer es el indicador de asociación más popular. En R hay varias funciones que entregan estos resultados, aquí revisaremos dos de ellas.</p>
@@ -313,20 +319,23 @@ vcd::assocstats(table(dataMejora))</code></pre>
 <pre class="r"><code># Gráfico para el estudio de Grados vs Nivel
 CGPfunctions::PlotXTabs(gradosLarga, Grados, Nivel)</code></pre>
 <pre><code>## Plotted dataset gradosLarga variables Grados by Nivel</code></pre>
-<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+<pre class="r"><code>CGPfunctions::PlotXTabs(gradosLarga, Nivel, Grados)</code></pre>
+<pre><code>## Plotted dataset gradosLarga variables Nivel by Grados</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-14-2.png" width="672" /></p>
 <pre class="r"><code># Gráfico para el estudio de treatment vs improvement
 CGPfunctions::PlotXTabs(dataMejora, treatment, improvement)</code></pre>
 <pre><code>## Plotted dataset dataMejora variables treatment by improvement</code></pre>
-<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-13-2.png" width="672" /></p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-14-3.png" width="672" /></p>
 <p>Puedes cambiar el argumento <code>plottype =</code> para cambiar rápidamente la forma del gráfico:</p>
 <pre class="r"><code># Barras apiladas
 CGPfunctions::PlotXTabs(gradosLarga, Grados, Nivel, plottype=&quot;stack&quot;)</code></pre>
 <pre><code>## Plotted dataset gradosLarga variables Grados by Nivel</code></pre>
-<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
 <pre class="r"><code># Barras porcentuales
 CGPfunctions::PlotXTabs(gradosLarga, Grados, Nivel, plottype=&quot;percent&quot;)</code></pre>
 <pre><code>## Plotted dataset gradosLarga variables Grados by Nivel</code></pre>
-<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-14-2.png" width="672" /></p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-15-2.png" width="672" /></p>
 <p><br></p>
 <p><strong>Para más información visita:</strong></p>
 <ul>

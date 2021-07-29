@@ -105,7 +105,7 @@ grados%>%
   rename(Nivel = rowname) -> gradosLarga
 
 # Visualizar el tibble
-gradosLarga
+View(gradosLarga)
 ```
 
 # **Chi cuadrado para conteos**
@@ -206,6 +206,25 @@ corrplot::corrplot(resGrados$residuals, is.cor = FALSE,
          tl.col = "black")
 ```
 
+## **Gráficos de Mosaico**
+
+```{r}
+# Gráfico de mosaico simple
+vcd::mosaic(~ Nivel, data=gradosLarga)
+vcd::mosaic(~ Grados, data=gradosLarga)
+
+# Gráfico de mosaico para ambas variables
+vcd::mosaic(Grados~ Nivel, data=gradosLarga)
+vcd::doubledecker(Grados~Nivel, data=gradosLarga)
+
+# Gráfico de mosaico para ambas variables sombreado por su nivel de aporte
+vcd::mosaic(~ Nivel  + Grados,
+            direction = c("v", "h"),
+            data = gradosLarga,
+            shade = TRUE, 
+            spacing = vcd::spacing_equal(sp = unit(0.3, "lines")))
+```
+
 ## **Nivel de asociación**
 
 Una vez que determinamos que existe dependencia entre las dos variables es posible que queramos conocer el nivel de dicha dependencia o asociación. Para este fin recurriremos a el `coeficiente de contingencia` o a índices como la `V de Cramer`. En particular, se recomienda el uso del coeficiente de contingencia para tablas más grandes que 5x5, mientras que para tablas pequeñas la V de Cramer es el indicador de asociación más popular. En R hay varias funciones que entregan estos resultados, aquí revisaremos dos de ellas.
@@ -230,6 +249,7 @@ La librería `CGPfunctions` provee una forma muy sencilla de graficar los conteo
 ```{r}
 # Gráfico para el estudio de Grados vs Nivel
 CGPfunctions::PlotXTabs(gradosLarga, Grados, Nivel)
+CGPfunctions::PlotXTabs(gradosLarga, Nivel, Grados)
 
 # Gráfico para el estudio de treatment vs improvement
 CGPfunctions::PlotXTabs(dataMejora, treatment, improvement)
