@@ -288,7 +288,7 @@ delay &lt;- filter(delay, count &gt; 20, dest != &quot;HNL&quot;)
 ggplot(data = delay, mapping = aes(x = dist, y = delay)) +
   geom_point(aes(size = count), alpha = 1/3) +
   geom_smooth(se = FALSE)</code></pre>
-<p><img src="Prueba1_files/figure-html/unnamed-chunk-4-1.png" width="576" /></p>
+<p><img src="index_files/figure-html/unnamed-chunk-4-1.png" width="576" /></p>
 <p>The code works, and we find an interesting effect: It looks like delays increase with distance up to ~750 miles and then decrease. Maybe as flights get longer there’s more ability to make up delays in the air?</p>
 <p>Now let’s look at how we prepared the data. There are three steps:</p>
 <ol style="list-style-type: decimal">
@@ -490,7 +490,7 @@ not_cancelled %&gt;%
   )
 ggplot(data = delays, mapping = aes(x = delay)) + 
   geom_freqpoly(binwidth = 10)</code></pre>
-<p><img src="Prueba1_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+<p><img src="index_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
 <p>Wow, there are some planes that have an <em>average</em> delay of 5 hours (300 minutes)!</p>
 <p>The story is actually a little more nuanced. We can get more insight if we draw a scatterplot of number of flights vs. average delay. Fill in the blank code below to compute and then plot the number of flights by the mean arrival delay (<code>arr_delay</code>).</p>
 <div class="tutorial-exercise" data-label="delays" data-caption="Code" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
@@ -524,7 +524,7 @@ ggplot(data = delays, mapping = aes(x = n, y = delay)) +
   filter(n &gt; 25) %&gt;% 
   ggplot(mapping = aes(x = n, y = delay)) + 
     geom_point(alpha = 1/10)</code></pre>
-<p><img src="Prueba1_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
+<p><img src="index_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
 <hr />
 <p>RStudio tip: a useful keyboard shortcut is Cmd/Ctrl + Shift + P. This resends the previously sent chunk from the editor to the console. This is very convenient when you’re (e.g.) exploring the value of <code>n</code> in the example above. You send the whole block once with Cmd/Ctrl + Enter, then you modify the value of <code>n</code> and press Cmd/Ctrl + Shift + P to resend the complete block.</p>
 <hr />
@@ -551,7 +551,7 @@ batters %&gt;%
     geom_point() + 
     geom_smooth(se = FALSE)</code></pre>
 <pre><code>## `geom_smooth()` using method = &#39;gam&#39; and formula &#39;y ~ s(x, bs = &quot;cs&quot;)&#39;</code></pre>
-<p><img src="Prueba1_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
+<p><img src="index_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
 <p>This also has important implications for ranking. If you look closely, the people with the best batting averages are clearly lucky, not skilled.</p>
 <p>You can find a good explanation of this problem at <a href="http://varianceexplained.org/r/empirical_bayes_baseball/" class="uri">http://varianceexplained.org/r/empirical_bayes_baseball/</a> and <a href="http://www.evanmiller.org/how-not-to-sort-by-average-rating.html" class="uri">http://www.evanmiller.org/how-not-to-sort-by-average-rating.html</a>.</p>
 </div>
