@@ -3,7 +3,7 @@ bio:
 
 education:
   courses:
-    - course: MEd en Educación con mención en Docencia e Investigación Universitaria
+  - course: MEd en Educación con mención en Docencia e Investigación Universitaria
     institution: Universidad San Martín de Porres (Perú)
     year: 2022
   - course: Titulo Biólogo
@@ -23,7 +23,7 @@ interests:
 organizations:
 - name: Instituto de Ciencias Antonio Brack
   url: https://www.brackinstitute.com/
-role: Director Ejectuvio & Profesor investigador
+role: Director ejecutivo & Profesor investigador
 social:
 - icon: envelope
   icon_pack: fas
@@ -49,4 +49,4 @@ title: Irwing S. Saldaña
 
 Soy biólogo egresado de la Universidad Nacional de Trujillo (Perú). Investigador CONCYTEC reconocido por el estado peruano (RENACYT: P0038629), asociado al departamento de [Ecoinformática y Biogeografía](https://www.brackinstitute.com/ecoinformatica) del [Instituto de Ciencias Antonio Brack](https://www.brackinstitute.com/) y a [CINBIOTYC](https://web.facebook.com/cinbiotyc/). Actualmente estoy estudiando un master en docencia universitaria e investigación, además de un segundo master en inteligencia analítica de datos. Me interesa el desarrollo de las áreas de ecoinformática y ecocústica con un enfoque integrativo, utilizando aplicaciones estadísticas y de aprendizaje automático para dilucidar los procesos ecológicos, evolución y asociados a la pérdida de la biodiversidad.
 
-{{< icon name="download" pack="fas" >}} Descarga mi CV {{< staticref "uploads/cv202107.pdf" "newtab" >}}resumé{{< /staticref >}}.
+{{< icon name="download" pack="fas" >}} Descarga mi CV {{< staticref "uploads/cv202110.pdf" "newtab" >}}resumé{{< /staticref >}}.
