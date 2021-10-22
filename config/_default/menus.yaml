@@ -4,7 +4,7 @@
 #   The weight parameter defines the order that the links will appear in.
 
 main:
-  - name: Blog
+  - name: Blog Post
     url: post/
     weight: 10
   - name: Canal de Youtube
