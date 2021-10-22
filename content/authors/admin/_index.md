@@ -3,10 +3,7 @@ bio:
 
 education:
   courses:
-  - course: MSc Inteligencia Analítica de Datos
-    institution: Universidad de Los Andes (Colombia)
-    year: 2023
-  - course: MEd en Educación con mención en Docencia e Investigación Universitaria
+    - course: MEd en Educación con mención en Docencia e Investigación Universitaria
     institution: Universidad San Martín de Porres (Perú)
     year: 2022
   - course: Titulo Biólogo
@@ -20,13 +17,13 @@ email: "isaldanau@gmail.com"
 highlight_name: true
 interests:
 - Ecoinformática
-- Ecoacústica
 - Modelamiento y Machine Learning
-- Ornitología
+- Filogenia y Filogeografía
+- Biogeografía
 organizations:
 - name: Instituto de Ciencias Antonio Brack
   url: https://www.brackinstitute.com/
-role: CEO & Profesor investigador
+role: Director Ejectuvio & Profesor investigador
 social:
 - icon: envelope
   icon_pack: fas
