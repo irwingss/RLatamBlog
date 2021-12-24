@@ -1,0 +1,86 @@
+---
+title: 'Árbol de Navidad en 3D con R' 
+author: "Irwing S. Saldaña" 
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+categories: ['R', 'Data Visualization'] 
+tags: ['3D','plotly','Gráficos'] 
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+La Navidad llegó a nuestros tutoriales. Aquí te mostraré un código reproducible para producir un arbolito de navidad en 3D usando plotly, para que sorprendas a tus colegas esta noche buena.
+
+# **Librerias**
+```{r, eval=FALSE}
+# Instalar
+install.packages("tidyverse")
+install.packages("plotly")
+```
+
+```{r}
+# Activar
+library(tidyverse)
+library(plotly)
+```
+
+# **Bases de datos**
+```{r}
+datos_arbol <- data.frame(index = 1:300) %>%
+  mutate(z=seq(1,300,1),
+         x=cos(z/5)*index-1,
+         y=sin(index/5)*index-1,
+         grupo=rep("arbol",300)) %>% 
+  arrange(index)
+
+datos_adornos1 <- data.frame(index = 1:30) %>%
+  mutate(z=seq(1,300,10),
+         x=cos(z/5+6)*(index+z+55),
+         y=sin(z/5+6)*(index+z+55),
+         grupo=rep("adorno",30))
+
+datos_adornos2 <- data.frame(index = 1:30) %>%
+  mutate(z=seq(1,300,10),
+         x=cos(z/5+20)*(index+z+10),
+         y=sin(z/5+20)*(index+z+10),
+         grupo=rep("adorno",30))
+
+datos_adornos3 <- data.frame(index = 1:30) %>%
+  mutate(z=seq(1,300,10),
+         x=cos(z/5+80)*(index+z+10),
+         y=sin(z/5+80)*(index+z+10),
+         grupo=rep("adorno",30))
+
+estrella <- data.frame(index=300, x=-0.0199334,
+                       y=-0.8013307, z=300, grupo="estrella")
+```
+
+# **Gráfico 3D**
+```{r}
+plot_ly(showlegend=FALSE) %>%
+  add_markers(data = datos_arbol, x=~x, y=~y, z=~rev(index),
+              marker = list(color = 'darkgreen', symbol = 'circle')) %>% 
+  add_markers(data = datos_adornos1, x=~x, y=~y, z=~rev(z),
+              marker = list(color = '#ed0057', symbol = 'circle')) %>%
+  add_markers(data = datos_adornos2, x=~x, y=~y, z=~rev(z),
+              marker = list(color = '#ed8200', symbol = 'circle')) %>%
+  add_markers(data = datos_adornos3, x=~x, y=~y, z=~rev(z),
+              marker = list(color = '#4ad2ff', symbol = 'circle')) %>%
+  add_text(data = estrella, x=~x, y=~y, z=~z-10, text = '★',
+           textfont = list(color="gold", size=30)) %>% 
+  layout(scene = list(aspectmode = "manual", aspectratio = list(x=1, y=1, z=1.2),
+                      xaxis = list(range=c(-500, 500)),
+                      yaxis = list(range=c(-500, 500)))) 
+```
+
+<br>
+
+**Para más información visita:**
+
+-   [Instituto de Ciencias Antonio Brack [website]](https://www.brackinstitute.com/)
+
+-   [Fan page [Facebook]](https://web.facebook.com/brackinstitute/)
+
+-   [Comunidad RLatam [Facebook]](https://web.facebook.com/groups/686154108929440)
+
+[Comment](https://twitter.com/irssald/status/1420199125224669192)
