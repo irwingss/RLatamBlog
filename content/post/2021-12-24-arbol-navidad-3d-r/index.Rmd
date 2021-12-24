@@ -66,7 +66,7 @@ plot_ly(showlegend=FALSE) %>%
               marker = list(color = '#ed8200', symbol = 'circle')) %>%
   add_markers(data = datos_adornos3, x=~x, y=~y, z=~rev(z),
               marker = list(color = '#4ad2ff', symbol = 'circle')) %>%
-  add_text(data = estrella, x=~x, y=~y, z=~z-10, text = '★',
+  add_text(data = estrella, x=~x, y=~y, z=~z-10, text = '⭐',
            textfont = list(color="gold", size=30)) %>% 
   layout(scene = list(aspectmode = "manual", aspectratio = list(x=1, y=1, z=1.2),
                       xaxis = list(range=c(-500, 500)),
@@ -75,6 +75,8 @@ plot_ly(showlegend=FALSE) %>%
 
 <br>
 
+El gráfico exportado en html usando Windows genera que la estrella se convierta en código ascii. Lamentablemente no se pueden usar los símbolos de plotly en R. Con phyton hay una gama amplia de puntos a proyectar.
+
 **Para más información visita:**
 
 -   [Instituto de Ciencias Antonio Brack [website]](https://www.brackinstitute.com/)
@@ -82,5 +84,3 @@ plot_ly(showlegend=FALSE) %>%
 -   [Fan page [Facebook]](https://web.facebook.com/brackinstitute/)
 
 -   [Comunidad RLatam [Facebook]](https://web.facebook.com/groups/686154108929440)
-
-[Comment](https://twitter.com/irssald/status/1420199125224669192)
