@@ -11,6 +11,10 @@ editor_options:
 
 La Navidad llegó a nuestros tutoriales. Aquí te mostraré un código reproducible para producir un arbolito de navidad en 3D usando plotly, para que sorprendas a tus colegas esta noche buena.
 
+<center>
+  <img src="/featured.jpg>
+</center>
+
 # **Librerias**
 ```{r, eval=FALSE}
 # Instalar
