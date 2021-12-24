@@ -15,7 +15,7 @@ La Navidad llegó a nuestros tutoriales. Aquí te mostraré un código reproduci
   <img src="/featured.jpg>
 </center>
 
-# **Librerias**
+## **Librerias**
 ```{r, eval=FALSE}
 # Instalar
 install.packages("tidyverse")
@@ -28,7 +28,7 @@ library(tidyverse)
 library(plotly)
 ```
 
-# **Bases de datos**
+## **Bases de datos**
 ```{r}
 datos_arbol <- data.frame(index = 1:300) %>%
   mutate(z=seq(1,300,1),
@@ -59,7 +59,7 @@ estrella <- data.frame(index=300, x=-0.0199334,
                        y=-0.8013307, z=300, grupo="estrella")
 ```
 
-# **Gráfico 3D**
+## **Gráfico 3D**
 ```{r}
 plot_ly(showlegend=FALSE) %>%
   add_markers(data = datos_arbol, x=~x, y=~y, z=~rev(index),
