@@ -15,7 +15,7 @@ La Navidad llegó a nuestros tutoriales. Aquí te mostraré un código reproduci
   <img src="/featured.jpg>
 </center>
 
-## **Librerias**
+## **Librerías**
 ```{r, eval=FALSE}
 # Instalar
 install.packages("tidyverse")
