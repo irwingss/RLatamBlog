@@ -11,10 +11,6 @@ editor_options:
 
 La Navidad llegó a nuestros tutoriales. Aquí te mostraré un código reproducible para producir un arbolito de navidad en 3D usando plotly, para que sorprendas a tus colegas esta noche buena.
 
-<center>
-  <img src="/featured.jpg>
-</center>
-
 ## **Librerías**
 ```{r, eval=FALSE}
 # Instalar
@@ -79,7 +75,7 @@ plot_ly(showlegend=FALSE) %>%
 
 <br>
 
-El gráfico exportado en html usando Windows genera que la estrella se convierta en código ascii. Lamentablemente no se pueden usar los símbolos de plotly en R. Con phyton hay una gama amplia de puntos a proyectar.
+El gráfico exportado en html usando Windows genera que la estrella se convierta en código ascii. Lamentablemente no se pueden usar los símbolos de plotly en R. Con python hay una gama amplia de puntos a proyectar.
 
 **Para más información visita:**
 
