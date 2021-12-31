@@ -1,7 +1,7 @@
 ---
 title: 'Árbol de Navidad en 3D con R' 
 author: "Irwing S. Saldaña" 
-date: "`r format(Sys.time(), '%d %B, %Y')`"
+date: 'December 30, 2021'
 categories: ['R', 'Data Visualization'] 
 tags: ['3D','plotly','Gráficos'] 
 output: html_document
