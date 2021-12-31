@@ -4,12 +4,12 @@
 #   The weight parameter defines the order that the links will appear in.
 
 main:
-  - name: Blog Post
+  - name: Archivos
     url: post/
     weight: 10
-  - name: Canal de Youtube
+  - name: Youtube
     url: https://www.youtube.com/channel/UCOTqfoQKMc61N_za-R6Ve7Q
     weight: 20
-  - name: Cursos (masterX)
+  - name: Mis Cursos
     url: https://www.brackinstitute.com/cursos-y-programas 
     weight: 30
