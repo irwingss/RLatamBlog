@@ -1,0 +1,53 @@
+---
+title: 'Mensaje Oculto Año Nuevo 2022' 
+author: "Irwing S. Saldaña" 
+date: "02 January, 2022"
+categories: ['R'] 
+tags: ['programación','R básico'] 
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
+
+
+<p>Sabemos que la pandemia del Covid-19 nos tiene ya dos años celebrando a la distancia, estando más lejos de lo que quisiéramos de todos los que amamos. Este 2022, tenemos un mensaje oculto en código de R. Solo queremos que sepas que esto nos sale del corazón, por que nuestros alumnos, tú, eres realmente importante en este mundo. ¿Quieres saber cuál es el mensaje? Comencemos con el tutorial.</p>
+<div id="librerías" class="section level2">
+<h2><strong>Librerías</strong></h2>
+<p>Debemos instalar esta librería para trabajar con la conversión de números a carateres de texto. Si ya la tienes instalada, obvia este paso.</p>
+<pre class="r"><code># Instalar
+install.packages(&quot;DescTools&quot;)</code></pre>
+</div>
+<div id="nuestro-mensaje-para-ti" class="section level2">
+<h2><strong>Nuestro mensaje para ti</strong></h2>
+<pre class="r"><code>charToRaw(&#39;LA FAMILIA DEL INSTITUTO DE CIENCIAS ANTONIO BRACK DESEA QUE ESTE AÑO NUEVO TE COLME DE MUCHA FELICIDAD&#39;) |&gt;
+  as.numeric() |&gt;
+  c(-4998)|&gt;
+  sum() |&gt;
+  paste(DescTools::AscToChar(c(83, 69, 82, 193, 32, 69, 76, 32, 77, 69, 74, 79, 
+                               82, 32, 65, 209, 79, 32, 68, 69, 32, 84, 79, 68, 
+                               79, 83, 46, 32, 77, 65, 78, 84, 69, 78, 84, 69, 32, 
+                               70, 73, 82, 77, 69, 32, 69, 78, 32, 84, 85, 83, 32, 
+                               77, 69, 84, 65, 83, 32, 89, 32, 65, 77, 65, 32, 65, 
+                               218, 78, 32, 77, 193, 83, 32, 65, 32, 84, 85, 83, 
+                               32, 83, 69, 82, 69, 83, 32, 81, 85, 69, 82, 73, 68, 
+                               79, 83, 44, 32, 76, 79, 83, 32, 81, 85, 69, 32, 69, 
+                               83, 84, 193, 78, 32, 89, 32, 76, 79, 83, 32, 81, 
+                               85, 69, 32, 84, 69, 32, 67, 85, 73, 68, 65, 78, 32, 
+                               68, 69, 83, 68, 69, 32, 76, 69, 74, 79, 83, 46, 32, 
+                               84, 69, 32, 68, 69, 83, 69, 65, 77, 79, 83, 32, 76, 
+                               79, 32, 77, 69, 74, 79, 82, 32, 83, 73, 69, 77, 80, 
+                               82, 69, 46, 32, 71, 82, 65, 67, 73, 65, 83, 32, 80, 
+                               79, 82, 32, 80, 69, 82, 84, 69, 78, 69, 67, 69, 82, 
+                               32, 65, 32, 78, 85, 69, 83, 84, 82, 65, 32, 70, 65, 
+                               77, 73, 76, 73, 65, 46)))</code></pre>
+<p><br></p>
+<p>Escríbe en nuestro post de <a href="https://web.facebook.com/brackinstitute/">Facebook</a> si descubriste el mensaje, y déjanos tus deseos para todos este 2022.</p>
+<p><strong>Para más información visita:</strong></p>
+<ul>
+<li><p><a href="https://www.brackinstitute.com/">Instituto de Ciencias Antonio Brack [website]</a></p></li>
+<li><p><a href="https://web.facebook.com/brackinstitute/">Fan page [Facebook]</a></p></li>
+<li><p><a href="https://web.facebook.com/groups/686154108929440">Comunidad RLatam [Facebook]</a></p></li>
+</ul>
+</div>
