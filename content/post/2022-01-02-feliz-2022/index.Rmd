@@ -49,6 +49,22 @@ charToRaw('LA FAMILIA DEL INSTITUTO DE CIENCIAS ANTONIO BRACK DESEA QUE ESTE AÑ
 
 Escríbe en nuestro post de [Facebook](https://web.facebook.com/brackinstitute/) si descubriste el mensaje, y déjanos tus deseos para todos este 2022.
 
+## **Crea tu propio mensaje**
+
+Para codificar un mensaje en vectores numéricos en R, puedes hacer la conversión de la cadena de texto usado:
+```{r}
+# Convertir "Mi mensaje misterioso" a vector numérico
+mensaje <- DescTools::CharToAsc("Mi mensaje misterioso")
+print(mensaje)
+```
+
+
+## **Información de la Sesión**
+```{r}
+sessionInfo()
+```
+
+
 **Para más información visita:**
 
 -   [Instituto de Ciencias Antonio Brack [website]](https://www.brackinstitute.com/)
