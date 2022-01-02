@@ -51,10 +51,13 @@ install.packages(&quot;DescTools&quot;)</code></pre>
 <h2><strong>Crea tu propio mensaje</strong></h2>
 <p>Es tu turno. Para codificar un mensaje en vectores numéricos en R, puedes hacer la conversión de la cadena de texto usado:</p>
 <pre class="r"><code># Convertir &quot;Mi mensaje misterioso&quot; a vector numérico
-mensaje &lt;- DescTools::CharToAsc(&quot;Mi mensaje misterioso&quot;)
-print(mensaje)</code></pre>
+mensajeCodificado &lt;- DescTools::CharToAsc(&quot;Mi mensaje misterioso&quot;)
+print(mensajeCodificado)</code></pre>
 <pre><code>##  [1]  77 105  32 109 101 110 115  97 106 101  32 109 105 115 116 101 114 105 111
 ## [20] 115 111</code></pre>
+<pre class="r"><code># Ahora convierte el mensaje codificado a texto
+DescTools::AscToChar(mensajeCodificado)</code></pre>
+<pre><code>## [1] &quot;Mi mensaje misterioso&quot;</code></pre>
 </div>
 <div id="información-de-la-sesión" class="section level2">
 <h2><strong>Información de la Sesión</strong></h2>
