@@ -46,12 +46,14 @@ charToRaw('LA FAMILIA DEL INSTITUTO DE CIENCIAS ANTONIO BRACK DESEA QUE ESTE AÑ
 ```
 
 <br>
+#### Importante:
+- Asegúrate de tener la versión de RStudio adecuada para usar pipe nativo `|>`. Si no te funciona por no tener RStudio actualizado, usa el pipe de tidyverse. Activa primero con `library(tidyverse)` y luego usa el pipe `%>%`.
 
 Escríbe en nuestro post de [Facebook](https://web.facebook.com/brackinstitute/) si descubriste el mensaje, y déjanos tus deseos para todos este 2022.
 
 ## **Crea tu propio mensaje**
 
-Para codificar un mensaje en vectores numéricos en R, puedes hacer la conversión de la cadena de texto usado:
+Es tu turno. Para codificar un mensaje en vectores numéricos en R, puedes hacer la conversión de la cadena de texto usado:
 ```{r}
 # Convertir "Mi mensaje misterioso" a vector numérico
 mensaje <- DescTools::CharToAsc("Mi mensaje misterioso")
