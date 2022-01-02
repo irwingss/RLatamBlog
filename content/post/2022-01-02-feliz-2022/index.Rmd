@@ -56,8 +56,11 @@ Escríbe en nuestro post de [Facebook](https://web.facebook.com/brackinstitute/)
 Es tu turno. Para codificar un mensaje en vectores numéricos en R, puedes hacer la conversión de la cadena de texto usado:
 ```{r}
 # Convertir "Mi mensaje misterioso" a vector numérico
-mensaje <- DescTools::CharToAsc("Mi mensaje misterioso")
-print(mensaje)
+mensajeCodificado <- DescTools::CharToAsc("Mi mensaje misterioso")
+print(mensajeCodificado)
+
+# Ahora convierte el mensaje codificado a texto
+DescTools::AscToChar(mensajeCodificado)
 ```
 
 
