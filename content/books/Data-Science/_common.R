@@ -1,5 +1,0 @@
-library(tidyverse)
-library(knitr)
-library(kableExtra)
-knitr::opts_chunk$set(echo = TRUE)
-bookdown::gitbook(split_by="section")
